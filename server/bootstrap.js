@@ -35,15 +35,20 @@ Meteor.startup(function () {
       }
     ];
 
+    // insert lists and items into a mongo database
     var timestamp = (new Date()).getTime();
     _.each(data, function(list) {
-      var list_id = Lists.insert({name: list.name,
-        incompleteCount: list.items.length});
-
+      var list_id = Lists.insert({
+        name: list.name,
+        incompleteCount: list.items.length
+      });
+      // a nested each loop to insert the list's items
       _.each(list.items, function(text) {
-        Todos.insert({listId: list_id,
-                      text: text,
-                      createdAt: new Date(timestamp)});
+        Todos.insert({
+          listId: list_id,
+          text: text,
+          createdAt: new Date(timestamp)
+        });
         timestamp += 1; // ensure unique timestamp.
       });
     });
