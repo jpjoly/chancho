@@ -1,6 +1,7 @@
 <template name="appBody">
+TEST00
   <div id="container" class="{{menuOpen}} {{cordova}}">
-
+    TEST0
     <section id="menu">
       {{#if currentUser}}
         <div class="btns-group-vertical">
@@ -19,6 +20,7 @@
       {{else}}
         <div class="btns-group">
           <a href="{{pathFor 'signin'}}" class="btn-secondary">Sign In</a>
+          <a href="{{pathFor 'chancho'}}" class="btn-secondary">Chanch</a>   
           <a href="{{pathFor 'join'}}" class="btn-secondary">Join</a>
         </div>
       {{/if}}
@@ -52,9 +54,7 @@
         </div>
       </div>
     {{/unless}}
-
     <div class="content-overlay"></div>
-
     <div id="content-container">
       {{#each thisArray}}
         {{> yield}}
