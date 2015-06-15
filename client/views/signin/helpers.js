@@ -1,4 +1,4 @@
-var ERRORS_KEY = 'signinErrors';
+ERRORS_KEY = 'signinErrors';
 
 Template.signin.onCreated(function() {
   Session.set(ERRORS_KEY, {});

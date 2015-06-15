@@ -13,6 +13,7 @@
           </a>
           {{#if userMenuOpen}}
             <a class="js-logout btn-secondary">Logout</a>
+            <a href="{{pathFor 'chancho'}}" class="btn-secondary">Chancho!</a>
           {{/if}}
         </div>
       {{else}}
@@ -21,9 +22,6 @@
           <a href="{{pathFor 'join'}}" class="btn-secondary">Join</a>
         </div>
       {{/if}}
-        <div class="btns-group">
-          <a href="{{pathFor 'chancho'}}" class="btn-secondary">Chancho!</a>
-        </div>
       <div class="list-todos">
         <a class="js-new-list link-list-new"><span class="icon-plus"></span>New List</a>
 
