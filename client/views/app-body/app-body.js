@@ -32,7 +32,10 @@ Meteor.startup(function () {
   }, CONNECTION_ISSUE_TIMEOUT);
 });
 
+// JP: this runs each time an instance of this template is inserted into the DOM for first time
+// not sure yet what this code does?
 Template.appBody.onRendered(function() {
+  // JP: is this jQuery?
   this.find('#content-container')._uihooks = {
     insertElement: function(node, next) {
       $(node)

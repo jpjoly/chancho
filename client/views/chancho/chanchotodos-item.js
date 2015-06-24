@@ -1,6 +1,6 @@
 var EDITING_KEY = 'EDITING_TODO_ID';
 
-Template.todosItem.helpers({
+Template.chanchoItem.helpers({
   checkedClass: function() {
     return this.checked && 'checked';
   },
@@ -9,7 +9,8 @@ Template.todosItem.helpers({
   }
 });
 
-Template.todosItem.events({
+
+Template.chanchoItem.events({
   'change [type=checkbox]': function(event) {
     var checked = $(event.target).is(':checked');
     Todos.update(this._id, {$set: {checked: checked}});
