@@ -13,7 +13,7 @@
           <a href="#" class="js-menu nav-item"><span class="icon-list-unordered" title="Show menu"></span></a>
         </div>
 
-        <h1 class="js-edit-list title-page"><span class="title-wrapper">{{name}}</span> <span class="count-list">{{incompleteCount}} TESTing on MacBook Pro</span></h1>
+        <h1 class="js-edit-list title-page"><span class="title-wrapper">Chancho!</span> <span class="count-list">TEST</span></h1>
 
         <div class="nav-group right">
           <div class="nav-item options-mobile">
@@ -43,33 +43,28 @@
           </div>
         </div>
       {{/if}}
-
-      <form class="js-todo-new todo-new input-symbol">
-        <input type="text" placeholder="Type to add new tasks">
-        <span class="icon-add js-todo-add"></span>
-      </form>
     </nav>
 
 
     <div class="content-scrollable list-items">
-      {{#if todosReady}}
-        {{#with _id}} {{! Establish new data context with only the '_id'
-                          field. This way, when the 'incompleteCount' field
-                          changes, we don't re-render the list contents }}
-          {{#each todos this}}
-            {{> chanchoItem}}
-          {{else}}
-            <div class="wrapper-message">
-              <div class="title-message">No tasks here</div>
-              <div class="subtitle-message">Add new tasks using the field above</div>
-            </div>
-          {{/each}}
-        {{/with}}
-      {{else}}
+          <div>This is a test message.</div>
+          <div><canvas id="myChart" width="400" height="400"></canvas></div>
+<script>
+
+var c = document.getElementById("myChart");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0, 0, 80, 100);
+
+</script>
+
+<!--
           <div class="wrapper-message">
-            <div class="title-message">Loading tasks...</div>
+            <div class="title-message">Loading tasks v1...</div>
           </div>
-      {{/if}}
+          <a>
+-->
     </div>
   </div>
 </template>
+

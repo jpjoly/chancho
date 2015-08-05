@@ -82,7 +82,11 @@ var deleteList = function(list) {
 
 var toggleListPrivacy = function(list) {
   if (! Meteor.user()) {
-    return alert("Please sign in or create an account to make private lists.");
+    //rect( 100, 100, 600, 600, 40 );
+    //
+    //return function () {alert("Please sign in or create an account to make private lists - you moron.");}
+    alert("Yo.");
+    return alert("Please sign in or create an account to make private lists - you moron.");
   }
 
   if (list.userId) {
