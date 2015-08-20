@@ -1,11 +1,44 @@
 <template name="todosItem">
-  <div class="list-item {{checkedClass}} {{editingClass}}">
-    <label class="checkbox">
-      <input type="checkbox" checked="{{checked}}" name="checked">
-      <span class="checkbox-custom"></span>
-    </label>
+	<div>
+	  	<div class="list-item {{checkedClass}} {{editingClass}}">
+	  	<table>
+	  		<tr>
+		    	<label class="checkbox">
+		      		<input type="checkbox" checked="{{checked}}" name="checked">
+		      		<span class="checkbox-custom"></span>
+		    	</label>
 
-    <input type="text" value="{{text}}" placeholder="Task name">
-    <a class="js-delete-item delete-item" href="#"><span class="icon-trash"></span></a>
-  </div>
+	    		<input type="text" value="{{text}}" placeholder="Task name">
+	    		<a class="js-delete-item delete-item" href="#"><span class="icon-trash"></span></a>
+	    	</tr>
+	    	<tr>
+	    		testing 123
+	    	</tr>
+	    	<tr>
+	    		testing 123
+	    	</tr>
+	    	<tr>
+	    		testing 123
+	    	</tr>
+	    	<tr>
+	    		testing 123
+	    	</tr>
+	   	</table>
+	  	</div>
+<!--
+	  	<div class="list-item {{checkedClass}} {{editingClass}}">
+		    <label class="checkbox">
+		      <input type="checkbox" checked="{{checked}}" name="checked">
+		      <span class="checkbox-custom"></span>
+		    </label>
+	    	<input type="text" value="{{text2}}" placeholder="My new info, dog...">
+	    	<form action="demo_form.asp">
+  Select images: <input type="file" name="img" multiple>
+  <input type="submit">
+</form>
+	    	<a class="js-delete-item delete-item" href="#"><span class="icon-trash"></span></a>
+
+	  	</div>
+	  -->
+	</div>
 </template>
