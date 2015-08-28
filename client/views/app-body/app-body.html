@@ -31,7 +31,7 @@
               <span class="icon-lock"></span>
             {{/if}}
             {{#if incompleteCount}}
-              <span class="count-list">IC{{incompleteCount}}</span>
+              <span class="count-list">IC>{{incompleteCount}}</span>
             {{/if}}
             {{name}}
           </a>
@@ -53,9 +53,14 @@
     {{/unless}}
     <div class="content-overlay"></div>
     <div id="content-container">
-      {{#each thisArray}}
+<!--
+  // We use #each on an array of one item so that the "list" template is
+  // removed and a new copy is added when changing lists, which is
+  // important for animation purposes. #each looks at the _id property of it's
+  // items to know when to insert a new item and when to update an old one. -->
+      {{#each thisArray}}  
         {{> yield}}
-      {{/each}}
+      {{/each}}-->
     </div>
   </div>
 </template>
