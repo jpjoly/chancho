@@ -6,6 +6,12 @@ Template.todosItem.helpers({
   },
   editingClass: function() {
     return Session.equals(EDITING_KEY, this._id) && 'editing';
+  },
+  jpQuantum: function() {
+    return 888;
+  },
+jpQuantumBoost: function() {
+    return 888 + 1;
   }
 });
 
@@ -39,7 +45,7 @@ Template.todosItem.events({
   'keyup input[type=text]': _.throttle(function(event) {
     Todos.update(this._id, {$set: {text: event.target.value}});
   }, 300),
-  
+    
   // handle mousedown otherwise the blur handler above will swallow the click
   // on iOS, we still require the click event so handle both
   'mousedown .js-delete-item, click .js-delete-item': function() {

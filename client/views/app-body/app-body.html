@@ -23,7 +23,7 @@
         </div>
       {{/if}}
       <div class="list-todos">
-        <a class="js-new-list link-list-new"><span class="icon-plus"></span>New List</a>
+        <a class="js-new-list link-list-new"><span class="icon-plus"></span>New Chancho</a>
 
         {{#each lists}}
           <a href="{{pathFor 'listsShow'}}" class="list-todo {{activeListClass}}" title="{{name}}">
@@ -31,7 +31,7 @@
               <span class="icon-lock"></span>
             {{/if}}
             {{#if incompleteCount}}
-              <span class="count-list">IC>{{incompleteCount}}</span>
+              <span class="count-list">IC{{incompleteCount}}</span>
             {{/if}}
             {{name}}
           </a>

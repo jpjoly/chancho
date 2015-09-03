@@ -13,7 +13,7 @@
           <a href="#" class="js-menu nav-item"><span class="icon-list-unordered" title="Show menu"></span></a>
         </div>
 
-        <h1 class="js-edit-list title-page"><span class="title-wrapper">{{name}}</span> <span class="count-list">{{incompleteCount}} TEST5 </span></h1>
+        <h1 class="js-edit-list title-page"><span class="title-wrapper">Chancho: {{name}}</span> <span class="count-list">{{incompleteCount}}</span></h1>
 
         <div class="nav-group right">
           <div class="nav-item options-mobile">
@@ -44,12 +44,18 @@
         </div>
       {{/if}}
 
+<p>
       <form class="js-todo-new todo-new input-symbol">
-        <input type="text" placeholder="Type to add new tasks">
+        <input type="text" placeholder="Type to add a chancho-item">
         <span class="icon-add js-todo-add"></span>
       </form>
+    </p>
+    <p>
+      <form class="js-todo-new todo-new input-symbol">
+        <input type="text" placeholder="Type chancho description here">
+        <span class="icon-add js-todo-add"></span>
+      </form></p>
     </nav>
-
 
     <div class="content-scrollable list-items">
       {{#if todosReady}}

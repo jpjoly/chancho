@@ -170,6 +170,7 @@ Template.listsShow.events({
     Todos.insert({
       listId: this._id,
       text: $input.val(),
+      jpQuantum: 666, 
       checked: false,
       createdAt: new Date()
     });
